@@ -25,7 +25,8 @@ module Capistrano
             instance_monitoring: {
               enabled: fetch(:aws_launch_configuration_detailed_instance_monitoring, true)
             },
-            user_data: fetch(:aws_launch_configuration_user_data, nil)
+            user_data: fetch(:aws_launch_configuration_user_data, nil),
+            key_pair: fetch(:aws_launch_configuration_key_pair, nil)
           )
         end
       end
